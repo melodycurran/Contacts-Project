@@ -10,6 +10,21 @@
   "schemes": [
     "https"
   ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Welcome"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
   "/contacts/": {
     "get": {
       "description": "",
