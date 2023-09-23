@@ -23,8 +23,7 @@
           }
         }
       }
-    }
-  },
+    },
     "/contacts/": {
       "get": {
         "tags": [
@@ -99,6 +98,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Contacts"
+        ],
         "description": "",
         "parameters": [
           {
@@ -177,3 +179,4 @@
       }
     }
   }
+}
