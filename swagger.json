@@ -27,6 +27,9 @@
   },
   "/contacts/": {
     "get": {
+      "tags": [
+        "Contacts"
+      ],
       "description": "",
       "produces": [
         "application/json"
@@ -38,6 +41,9 @@
       }
     },
     "post": {
+      "tags": [
+        "Contacts"
+      ],
       "description": "",
       "parameters": [
         {
@@ -71,6 +77,9 @@
   },
   "/contacts/{id}": {
     "get": {
+      "tags": [
+        "Contacts"
+      ],
       "description": "",
       "produces": [
         "application/json"
@@ -127,6 +136,9 @@
       }
     },
     "delete": {
+      "tags": [
+        "Contacts"
+      ],
       "description": "",
       "parameters": [
         {
