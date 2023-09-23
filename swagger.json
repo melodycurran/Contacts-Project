@@ -25,155 +25,155 @@
       }
     }
   },
-  "/contacts/": {
-    "get": {
-      "tags": [
-        "Contacts"
-      ],
-      "description": "",
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "OK"
+    "/contacts/": {
+      "get": {
+        "tags": [
+          "Contacts"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
         }
-      }
-    },
-    "post": {
-      "tags": [
-        "Contacts"
-      ],
-      "description": "",
-      "parameters": [
-        {
-          "name": "body",
-          "in": "body",
-          "schema": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "example": "any"
-              },
-              "phone": {
-                "example": "any"
-              },
-              "relationship": {
-                "example": "any"
+      },
+      "post": {
+        "tags": [
+          "Contacts"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "phone": {
+                  "example": "any"
+                },
+                "relationship": {
+                  "example": "any"
+                }
               }
             }
           }
-        }
-      ],
-      "responses": {
-        "204": {
-          "description": "No Content"
-        },
-        "500": {
-          "description": "Internal Server Error"
-        }
-      }
-    }
-  },
-  "/contacts/{id}": {
-    "get": {
-      "tags": [
-        "Contacts"
-      ],
-      "description": "",
-      "produces": [
-        "application/json"
-      ],
-      "parameters": [
-        {
-          "name": "id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        }
-      ],
-      "responses": {
-        "200": {
-          "description": "OK"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       }
     },
-    "put": {
-      "description": "",
-      "parameters": [
-        {
-          "name": "id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
-          "name": "body",
-          "in": "body",
-          "schema": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "example": "any"
-              },
-              "phone": {
-                "example": "any"
-              },
-              "relationship": {
-                "example": "any"
+    "/contacts/{id}": {
+      "get": {
+        "tags": [
+          "Contacts"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "phone": {
+                  "example": "any"
+                },
+                "relationship": {
+                  "example": "any"
+                }
               }
             }
           }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
-      ],
-      "responses": {
-        "204": {
-          "description": "No Content"
-        },
-        "500": {
-          "description": "Internal Server Error"
-        }
-      }
-    },
-    "delete": {
-      "tags": [
-        "Contacts"
-      ],
-      "description": "",
-      "parameters": [
-        {
-          "name": "id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-        {
-          "name": "body",
-          "in": "body",
-          "schema": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "example": "any"
-              },
-              "phone": {
-                "example": "any"
-              },
-              "relationship": {
-                "example": "any"
+      },
+      "delete": {
+        "tags": [
+          "Contacts"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "phone": {
+                  "example": "any"
+                },
+                "relationship": {
+                  "example": "any"
+                }
               }
             }
           }
-        }
-      ],
-      "responses": {
-        "204": {
-          "description": "No Content"
-        },
-        "500": {
-          "description": "Internal Server Error"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       }
     }
   }
-}
