@@ -18,7 +18,55 @@ const getSingle = async (req, res) => {
     });
 };
 
+const createContact = async (req, res) => {
+    const userId = new ObjectId(req.params.id);
+    const contact = {
+        fullName: req.body.name,
+        phone: req.body.phone,
+        relationship: req.body.relationship
+    };
+    const response = await mongodb.getDatabase().db().collection('userContacts').insertOne(contact); 
+    if (response.acknowledged > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).json(response.error) || 'An error ocurred. Try again.'
+    }
+};
+
+const updateContact = async (req, res) => {
+    const userId = new ObjectId(req.params.id);
+    const contact = {
+        fullName: req.body.name,
+        phone: req.body.phone,
+        relationship: req.body.relationship
+    };
+    const response = await mongodb.getDatabase().db().collection('userContacts').replaceOne({_id: userId}, contact); 
+    if (response.modifiedCount > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).json(response.error) || 'An error ocurred. Try again.'
+    }
+};
+
+const deleteContact = async (req, res) => {
+    const userId = new ObjectId(req.params.id);
+    const contact = {
+        fullName: req.body.name,
+        phone: req.body.phone,
+        relationship: req.body.relationship
+    };
+    const response = await mongodb.getDatabase().db().collection('userContacts').deleteOne({_id: userId}); 
+    if (response.deletedCount > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).json(response.error) || 'An error ocurred. Try again.'
+    }
+};
+
 module.exports = {
     getAll,
-    getSingle
+    getSingle,
+    createContact, 
+    updateContact,
+    deleteContact
 };
