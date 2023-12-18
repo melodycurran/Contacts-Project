@@ -1,14 +1,15 @@
-const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
+const Contact = require('../model/Contacts');
+const mongodb = require('../data/database');
 
-const getAll = async (req, res) => {
-    //#swagger.tags = ['Contacts']
-    const result = await mongodb.getDatabase().db().collection('userContacts').find();
-    result.toArray().then((contacts) => {
-        res.setHeader('Content-type', 'application/json');
-        res.status(200).json(contacts);
-    });
-};
+// const getAll = async (req, res) => {
+//     //#swagger.tags = ['Contacts']
+//     const result = await Contact.find({});
+
+//     res.setHeader('Content-type', 'application/json');
+//     res.status(200).json(result);
+
+// };
 
 const getSingle = async (req, res) => {
     //#swagger.tags = ['Contacts']
@@ -69,7 +70,6 @@ const deleteContact = async (req, res) => {
 };
 
 module.exports = {
-    getAll,
     getSingle,
     createContact, 
     updateContact,

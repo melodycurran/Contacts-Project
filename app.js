@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 app.use('/', require("./routes"));
 
 
-mongo.initDb((err) => {
+mongo.connect((err) => {
     if(err) {
         console.log(err);
     } else {
